@@ -1,0 +1,108 @@
+---
+title: "Introduction to R (lesson plan)"
+author: "Reiko Okamoto"
+format: html
+editor: visual
+---
+
+## 🧊Introduction and Icebreaker (5 min)
+
+-   Introduce yourself
+
+-   Encourage everyone to briefly share their background and interest in learning R (in the chat)
+
+-   Explain the agenda
+
+-   Let the participants know that the code will be shared on GitHub
+
+## 🌐Overview of R (5 min)
+
+-   R is a programming language and environment designed for statistical computing and data analysis
+
+-   It provides a wide range of statistical and graphical techniques, making it a powerful tool for data manipulation, exploration, visualization, and modeling
+
+-   Advantages
+
+    -   Free software environment that is accessible to everyone
+
+    -   Community-developed code enhancements and bug fixes; a large, active community contributes to its extensive collection of packages
+
+-   Disadvantages
+
+    -   Can be slower than comparable languages like Python
+
+    -   Might not handle memory as efficiently as other languages (e.g., Python)
+
+## 💻Getting started with R on Posit Cloud (5 min)
+
+-   *Why are we using Posit Cloud?*
+
+    -   Instructors and students only need a browser to access the RStudio IDE; no installation or complex configuration required
+
+    -   Ensures consistent environment across devices
+
+-   *What is the purpose of each pane?*
+
+    -   Script editor: writing and editing R code
+
+        -   🏃Write a basic mathematical operation
+
+    -   Console: executing R code and displaying output
+
+        -   🏃Execute the code by selecting the code and clicking on the "Run" button
+
+        -   🏃Execute the code using the keyboard shortcut (Ctrl/Cmd + Enter)
+
+    -   Environment: displaying objects, variables, and their values
+
+    -   Files/Plots/Packages: managing files, displaying plots, handling packages
+
+## 1️⃣Data types and variables (10 min)
+
+-   Data types define the format in which data is stored and the operations that can be performed on that data
+
+-   There are 4 data types:
+
+    1.  Numeric: integers and decimal numbers
+
+        -   🏃Create a numeric variable
+
+        -   Variables are containers for storing data
+
+            ```{r}
+            num_var <- 10
+            ```
+
+    2.  Character: text, enclosed in quotes
+
+        -   🏃Create a character variable
+
+            ```{r}
+            char_var <- "Hello world"
+            ```
+
+    3.  Logical: Boolean values (TRUE or FALSE)
+
+        -   🏃Create a logical variable
+
+            ```{r}
+            bool_var <- TRUE
+            ```
+
+    4.  Factor: ordered categorical data
+
+        -   🏃Create a factor variable
+
+            ```{r}
+            factor_var <- factor(c())
+            ```
+
+## 🏢Data structures (10 min)
+
+## ➕Operators (10 min)
+
+## 🔣Functions (10 min)
+
+## 📦Packages (5 min)
+
+## 📚Resources
