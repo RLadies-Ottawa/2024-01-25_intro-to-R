@@ -1,0 +1,436 @@
+---
+title: "Introduction to R (lesson plan)"
+author: "Reiko Okamoto"
+format: html
+editor: visual
+---
+
+## 🧊Introduction and Icebreaker (5 min)
+
+-   Encourage participants briefly share their background and interest in learning R (in the chat)
+
+-   Go over ground rules
+
+    -   
+
+-   Code will be shared on GitHub
+
+## 🌐Overview of R (5 min)
+
+-   R is a programming language and environment designed for statistical computing and data analysis
+
+-   It provides a wide range of statistical and graphical techniques, making it a powerful tool for data manipulation, exploration, visualization, and modeling
+
+-   Advantages
+
+    -   Free software environment that is accessible to everyone
+
+    -   Community-developed code enhancements and bug fixes; a large, active community contributes to its extensive collection of packages
+
+-   Disadvantages
+
+    -   Can be slower and might not handle memory as efficiently as other languages
+
+## 💻Getting started with R on Posit Cloud (5 min)
+
+-   *Why are we using Posit Cloud?*
+
+    -   Instructors and students only need a browser to access the RStudio IDE; no installation or complex configuration required
+
+    -   Ensures consistent environment across devices
+
+-   *What is the purpose of each pane?*
+
+    -   Script editor: writing and editing R code
+
+        -   🚶‍♀️Write a basic mathematical operation
+
+    -   Console: executing R code and displaying output
+
+        -   🚶‍♀️Execute the code by selecting the code and clicking on the "Run" button
+
+        -   🚶‍♀️Execute the code using the keyboard shortcut (Ctrl/Cmd + Enter)
+
+    -   Environment: displaying objects, variables, and their values
+
+    -   Files/Plots/Packages: managing files, displaying plots, handling packages
+
+## 1️⃣Data types and variables (10 min)
+
+-   **Data types** define the format in which data is stored and the operations that can be performed on that data
+
+-   R's basic data types are:
+
+    1.  Character: text, enclosed in quotes
+
+    2.  Numeric
+
+    3.  Integer
+
+    4.  Complex
+
+    5.  Logical: Boolean values (TRUE or FALSE)
+
+-   🚶‍♀️Assign a string to a variable:
+
+    ```{r}
+    char_var <- "Hello world"
+    ```
+
+    -   Variables are containers for storing data
+
+    -   It's best to use lowercase letters and underscores for variable names
+
+    -   We want to use descriptive names that describes the information held by the variable
+
+```{=html}
+<!-- -->
+```
+-   🚶‍♀️Create a numeric variable:
+
+    ```{r}
+    num_var <- 10
+    ```
+
+```{=html}
+<!-- -->
+```
+-   🚶‍♀️Create an integer variable:
+
+    ```{r}
+    int_var <- 3L
+    ```
+
+```{=html}
+<!-- -->
+```
+-   🚶‍♀️Create a complex variable:
+
+    ```{r}
+    comp_var <- 3i
+    ```
+
+```{=html}
+<!-- -->
+```
+-   🚶‍♀️Create a logical variable:
+
+    ```{r}
+    bool_var <- TRUE
+    ```
+
+```{=html}
+<!-- -->
+```
+-   🏃‍♀️Practice exercises - Part 1
+
+    1.  Create a character variable with your name
+
+    2.  Create a numeric variable with a decimal value
+
+    3.  Create an integer variable to represent an year
+
+    4.  Create a logical variable with a value of FALSE
+
+    5.  Check the data type of each variable using the `class()` function
+
+```{r}
+class(bool_var)
+```
+
+## 🏢Data structures (5 min)
+
+-   **Data structures** are containers for organizing and storing data in different formats
+
+-   R's data structures include:
+
+    -   Atomic vector
+
+    -   Factor
+
+    -   Data frame
+
+    -   List
+
+    -   Matrix
+
+-   Vector
+
+    -   A collection of elements of the same data type
+
+    -   🚶‍♀️Create numeric and character vectors:
+
+        ```{r}
+        num_vector <- c(1, 2, 3, 4, 5)
+        char_vector <- c("apple", "grapefruit", "banana") 
+        ```
+
+    -   🚶‍♀️Check the length of the vector:
+
+        ```{r}
+        length(num_vector)
+        ```
+
+    -   🚶‍♀️Retrieve the first value of the vector (i.e., vector indexing):
+
+        ```{r}
+        num_vector[1]
+        ```
+
+    -   🚶‍♀️Retrieve the second and fourth values of the vector:
+
+        ```{r}
+        num_vector[c(2,4)]
+        ```
+
+-   Factor
+
+    -   Used to represent categorical variables with predefined levels
+
+    -   🚶‍♀️Create a factor variable:
+
+        ```{r}
+        social_class <- c("Upper", "Middle", "Lower", "Upper", "Middle")
+        ```
+
+    -   Helps users arrange bar graph in desired order when using ggplot2
+
+```{=html}
+<!-- -->
+```
+-   Data frames
+
+    -   A collection of vectors that all have the same length; each column can contain a different data type (in a given column, all values must be of the same data type)
+
+    -   Used to represent tabular data
+
+    -   🚶‍♀️Create a data frame:
+
+        ```{r}
+        df <- data.frame(
+          name = c("Alice", "Bob", "Charlie"),
+          age = c(25, 30, 28),
+          has_pet = c(TRUE, FALSE, TRUE)
+        )
+
+        df
+        ```
+
+    -   🚶‍♀️Access a specific value by row and column indices:
+
+        ```{r}
+        df[2, "age"]
+        df[2, 2]
+        ```
+
+## ➕Operators (10 min)
+
+-   **Arithmetic operators**
+
+    -   Takes two objects and performs a calculation on them
+
+    -   🚶‍♀️Add 10 and 5:
+
+        ```{r}
+        10 + 5
+        ```
+
+    -   🚶‍♀️Subtract 7 from 15:
+
+        ```{r}
+        15 - 7
+        ```
+
+    -   🚶‍♀️Multiply 4 by 6:
+
+        ```{r}
+        4 * 6
+        ```
+
+    -   🚶‍♀️Divide 20 by 4:
+
+        ```{r}
+        20 / 4
+        ```
+
+    -   🚶‍♀️Calculate 17 mod 5 (the remainder after dividing 17 by 5):
+
+        ```{r}
+        17 %% 5
+        ```
+
+    -   🚶‍♀️Raise 3 to the power of 2:
+
+        ```{r}
+        2 ^ 3
+        2 ** 3
+        ```
+
+-   **Relational operators**
+
+    -   Compares two objects and returns TRUE or FALSE
+
+    -   🚶‍♀️Check that 10 is equal to 10:
+
+        ```{r}
+        10 == 10
+        ```
+
+    -   🚶‍♀️Check that 5 is not equal to 7:
+
+        ```{r}
+        5 != 7
+        ```
+
+    -   🚶‍♀️Check that 8 is greater than 5:
+
+        ```{r}
+        8 > 5
+        ```
+
+    -   🚶‍♀️Check that 4 is less than or equal to 4:
+
+        ```{r}
+        4 <= 4
+        ```
+
+    -   🚶‍♀️Check that 3 is greater than or equal to 4:
+
+        ```{r}
+        3 >= 4
+        ```
+
+-   **Logical operators**
+
+    -   Operators that act on logical values
+
+    -   🚶‍♀️Check that 5 is greater than 3 **AND** 7 is less than 10:
+
+        ```{r}
+        (5 > 3) & (7 < 10)
+        ```
+
+    -   🚶‍♀️Check that 4 is greater than 6 **OR** 9 is equal to 9:
+
+        ```{r}
+        (4 > 6) | (9 == 9)
+        ```
+
+    -   🚶‍♀️Check that NOT TRUE is FALSE:
+
+        ```{r}
+        !TRUE
+        ```
+
+## 🔣Functions (10 min)
+
+-   **Functions** are blocks of code designed to perform specific tasks
+
+    -   We have already seen the `class()` and `length()` functions
+
+-   They accept inputs, process them, and often return outputs
+
+-   They allow users to encapsulate sequence of operations and make code more modular, making your code more readable and easier to debug
+
+-   Base R's statistical functions:
+
+    -   🚶‍♀️Calculate the mean (average) of a numeric vector:
+
+        ```{r}
+        numbers <- c(5, 8, 12, 15, 20)
+        average <- mean(numbers)
+        ```
+
+    -   🚶‍♀️Calculate the median (middle value) of a numeric vector:
+
+        ```{r}
+        median_value <- median(numbers)
+        ```
+
+    -   🚶‍♀️Calculate the sum of values in a numeric vector:
+
+        ```{r}
+        total_value <- sum(numbers)
+        ```
+
+    -   🚶‍♀️Calculate the minimum of values in a numeric vector:
+
+        ```{r}
+        min_value <- min(numbers)
+        ```
+
+    -   🚶‍♀️Calculate the maximum of values in a numeric vector:
+
+        ```{r}
+        max_value <- max(numbers)
+        ```
+
+-   🏃‍♀️ Practice exercises - Part 3
+
+    1.  Use the `sd()` function to return the standard deviation of `numbers`
+
+    2.  Use the `abs()` function to return the absolute value of a number
+
+    3.  Use the `sqrt()` function to return the square root of a number. What happens when you square root a negative number?
+
+    4.  Use the `round()` function to round 3.14159 to 2 decimal places
+
+-   Getting help with R
+
+    -   The `help()` function or `?` symbol is used to access function documentation
+
+    -   🚶‍♀️Access the documentation for the `mean()` function:
+
+        ```{r}
+        help("mean")
+        ?mean
+        ```
+
+    -   The documentation provides useful information, including usage, parameters, examples, and explanations
+
+## 👩‍🔧Pipes (5 min)
+
+-   🚶‍♀️ Compute the sum of every number from 1 to 10 and take its square root, rounded to 3 decimal places:
+
+    ```{r}
+    # this is difficult to read
+    round(sqrt(sum(1:10)), digits = 3)
+    ```
+
+-   🚶‍♀️Repeat the calculation with the pipe operator:
+
+    ```{r}
+    # the pipe makes it easier to read
+    1:10 |> 
+      sum() |> 
+      sqrt() |> 
+      round(digits = 3)
+    ```
+
+-   The **pipe operator** allows users to chain operations together, enhancing code readability and reducing nesting
+
+-   Operations flow left-to-right; sequence of actions is presented more clearly
+
+-   Anything written after `#` on a line is considered a **comment** and is not executed as code
+
+    -   They help to clarify the purpose or functionality of code for other users and even for yourself in the future
+
+## 📦Packages (5 min)
+
+-   **Packages** are sets of R functions, data sets, and other resources bundled together
+
+-   They enhance base R's functionality by providing specialized tools for various tasks
+
+-   In the next two classes, we will be taking a closer look at:
+
+    -   [dplyr](https://github.com/tidyverse/dplyr) for data manipulation and transformation
+
+    -   [ggplot2](https://github.com/tidyverse/ggplot2) for creating high-quality visualizations
+
+## 📚Resources
+
+-   [R for Data Science](https://r4ds.had.co.nz/)
+
+-   [Programming with R: Data Types and Structures](https://swcarpentry.github.io/r-novice-inflammation/13-supp-data-structures.html)
+
+-   [9.4 Data types and data structures](https://www.stat.auckland.ac.nz/~paul/ItDT/HTML/node64.html)
