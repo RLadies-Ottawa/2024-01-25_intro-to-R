@@ -74,7 +74,7 @@ editor: visual
 -   🚶‍♀️Assign a string to a variable:
 
     ```{r data-type-01}
-    char_var <- "Hello world"
+
     ```
 
     -   Variables are containers for storing data
@@ -86,30 +86,27 @@ editor: visual
 -   🚶‍♀️Create a numeric variable:
 
     ```{r data-type-02}
-    num_var <- 10
+
     ```
 
 -   🚶‍♀️Create an integer variable:
 
     ```{r data-type-03}
-    int_var <- 3L
+
     ```
 
 -   🚶‍♀️Create a complex variable:
 
     ```{r data-type-04}
-    comp_var <- 3i
+
     ```
 
 -   🚶‍♀️Create a logical variable:
 
     ```{r data-type-05}
-    bool_var <- TRUE
+
     ```
 
-```{=html}
-<!-- -->
-```
 -   🏃‍♀️Practice exercises - Part 1
 
     1.  Create a character variable with your name
@@ -123,7 +120,7 @@ editor: visual
     5.  Check the data type of each variable using the `class()` function
 
 ```{r data-type-06}
-class(bool_var)
+
 ```
 
 ## 🏢Data structures (5 min)
@@ -149,26 +146,25 @@ class(bool_var)
     -   🚶‍♀️Create numeric and character vectors:
 
         ```{r data-structures-01}
-        num_vector <- c(1, 2, 3, 4, 5)
-        char_vector <- c("apple", "grapefruit", "banana") 
+
         ```
 
     -   🚶‍♀️Check the length of the vector:
 
         ```{r data-structures-02}
-        length(num_vector)
+
         ```
 
     -   🚶‍♀️Retrieve the first value of the vector (i.e., vector indexing):
 
         ```{r data-structures-03}
-        num_vector[1]
+
         ```
 
     -   🚶‍♀️Retrieve the second and fourth values of the vector:
 
         ```{r data-structures-04}
-        num_vector[c(2,4)]
+
         ```
 
 -   Factor
@@ -178,7 +174,7 @@ class(bool_var)
     -   🚶‍♀️Create a factor variable:
 
         ```{r data-structures-05}
-        social_class <- c("Upper", "Middle", "Lower", "Upper", "Middle")
+
         ```
 
     -   Helps users arrange bar graph in desired order when using ggplot2
@@ -192,20 +188,13 @@ class(bool_var)
     -   🚶‍♀️Create a data frame:
 
         ```{r data-structures-06}
-        df <- data.frame(
-          name = c("Alice", "Bob", "Charlie"),
-          age = c(25, 30, 28),
-          has_pet = c(TRUE, FALSE, TRUE)
-        )
 
-        df
         ```
 
     -   🚶‍♀️Access a specific value by row and column indices:
 
         ```{r data-structures-07}
-        df[2, "age"]
-        df[2, 2]
+
         ```
 
 ## ➕Operators (10 min)
@@ -217,38 +206,37 @@ class(bool_var)
     -   🚶‍♀️Add 10 and 5:
 
         ```{r operators-01}
-        10 + 5
+
         ```
 
     -   🚶‍♀️Subtract 7 from 15:
 
         ```{r operators-02}
-        15 - 7
+
         ```
 
     -   🚶‍♀️Multiply 4 by 6:
 
         ```{r operators-03}
-        4 * 6
+
         ```
 
     -   🚶‍♀️Divide 20 by 4:
 
         ```{r operators-04}
-        20 / 4
+
         ```
 
     -   🚶‍♀️Calculate 17 mod 5 (the remainder after dividing 17 by 5):
 
         ```{r operators-05}
-        17 %% 5
+
         ```
 
     -   🚶‍♀️Raise 3 to the power of 2:
 
         ```{r operators-06}
-        2 ^ 3
-        2 ** 3
+
         ```
 
 -   **Relational operators**
@@ -258,31 +246,31 @@ class(bool_var)
     -   🚶‍♀️Check that 10 is equal to 10:
 
         ```{r operators-07}
-        10 == 10
+
         ```
 
     -   🚶‍♀️Check that 5 is not equal to 7:
 
         ```{r operators-08}
-        5 != 7
+
         ```
 
     -   🚶‍♀️Check that 8 is greater than 5:
 
         ```{r operators-09}
-        8 > 5
+
         ```
 
     -   🚶‍♀️Check that 4 is less than or equal to 4:
 
         ```{r operators-10}
-        4 <= 4
+
         ```
 
     -   🚶‍♀️Check that 3 is greater than or equal to 4:
 
         ```{r operators-11}
-        3 >= 4
+
         ```
 
 -   **Logical operators**
@@ -292,19 +280,19 @@ class(bool_var)
     -   🚶‍♀️Check that 5 is greater than 3 **AND** 7 is less than 10:
 
         ```{r operators-12}
-        (5 > 3) & (7 < 10)
+
         ```
 
     -   🚶‍♀️Check that 4 is greater than 6 **OR** 9 is equal to 9:
 
         ```{r operators-13}
-        (4 > 6) | (9 == 9)
+
         ```
 
     -   🚶‍♀️Check that NOT TRUE is FALSE:
 
         ```{r operators-14}
-        !TRUE
+
         ```
 
 ## 🔣Functions (10 min)
@@ -322,32 +310,31 @@ class(bool_var)
     -   🚶‍♀️Calculate the mean (average) of a numeric vector:
 
         ```{r functions-01}
-        numbers <- c(5, 8, 12, 15, 20)
-        average <- mean(numbers)
+
         ```
 
     -   🚶‍♀️Calculate the median (middle value) of a numeric vector:
 
         ```{r functions-02}
-        median_value <- median(numbers)
+
         ```
 
     -   🚶‍♀️Calculate the sum of values in a numeric vector:
 
         ```{r functions-03}
-        total_value <- sum(numbers)
+
         ```
 
     -   🚶‍♀️Calculate the minimum of values in a numeric vector:
 
         ```{r functions-04}
-        min_value <- min(numbers)
+
         ```
 
     -   🚶‍♀️Calculate the maximum of values in a numeric vector:
 
         ```{r functions-05}
-        max_value <- max(numbers)
+
         ```
 
 -   🏃‍♀️ Practice exercises - Part 3
@@ -367,8 +354,7 @@ class(bool_var)
     -   🚶‍♀️Access the documentation for the `mean()` function:
 
         ```{r functions-06}
-        help("mean")
-        ?mean
+
         ```
 
     -   The documentation provides useful information, including usage, parameters, examples, and explanations
@@ -378,18 +364,13 @@ class(bool_var)
 -   🚶‍♀️ Compute the sum of every number from 1 to 10 and take its square root, rounded to 3 decimal places:
 
     ```{r pipes-01}
-    # this is difficult to read
-    round(sqrt(sum(1:10)), digits = 3)
+
     ```
 
 -   🚶‍♀️Repeat the calculation with the pipe operator:
 
     ```{r pipes-02}
-    # the pipe makes it easier to read
-    1:10 |> 
-      sum() |> 
-      sqrt() |> 
-      round(digits = 3)
+
     ```
 
 -   The **pipe operator** allows users to chain operations together, enhancing code readability and reducing nesting
