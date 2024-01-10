@@ -7,13 +7,17 @@ editor: visual
 
 ## 🧊Introduction and Icebreaker (5 min)
 
--   Encourage participants briefly share their background and interest in learning R (in the chat)
+-   Ask participants to briefly share their background and interest in learning R (in the chat)
 
--   Go over ground rules
+-   Code will be made available on [GitHub](https://github.com/RLadies-Ottawa/2024-01-25_intro-to-R)
 
-    -   
+-   This workshop was originally developed for [the NRC Women in Science and Innovation Coding Group](https://github.com/yoitsjenna/nRc-WiSI)
 
--   Code will be shared on GitHub
+-   Upcoming schedule
+
+    -   **Introduction to Data Visualization (Part 1)** - Thursday, February 1 at 12:00-13:00 ET
+
+    -   **Introduction to Data Visualization (Part 2)** - Thursday, February 22 at 12:00-13:00 ET
 
 ## 🌐Overview of R (5 min)
 
@@ -54,6 +58,14 @@ editor: visual
     -   Environment: displaying objects, variables, and their values
 
     -   Files/Plots/Packages: managing files, displaying plots, handling packages
+
+## 📝Quarto document (1 min)
+
+-   Quarto allows you to combine your code, its results, and your prose into one document.
+
+-   It supports multiple output formats (e.g., PDFs, HTML files, Word files, presentations)
+
+-   When you click the **Render** button a document will be generated that includes both the content and output of any embedded R code chunks.
 
 ## 1️⃣Data types and variables (10 min)
 
@@ -107,9 +119,8 @@ editor: visual
     bool_var <- TRUE
     ```
 
-```{=html}
 <!-- -->
-```
+
 -   🏃‍♀️Practice exercises - Part 1
 
     1.  Create a character variable with your name
@@ -411,6 +422,8 @@ class(bool_var)
     -   [dplyr](https://github.com/tidyverse/dplyr) for data manipulation and transformation
 
     -   [ggplot2](https://github.com/tidyverse/ggplot2) for creating high-quality visualizations
+
+-   Both of these packages belong to the [tidyverse](https://www.tidyverse.org/), a meta-package (package of packages) that helps to transform and better present data
 
 ## 📚Resources
 
