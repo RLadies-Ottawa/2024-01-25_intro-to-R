@@ -5,7 +5,7 @@ format: html
 editor: visual
 ---
 
-## 🧊Introduction and Icebreaker (5 min)
+## 🧊Introduction and Icebreaker (5 min,12:05)
 
 -   Ask participants to briefly share their background and interest in learning R (in the chat)
 
@@ -19,7 +19,7 @@ editor: visual
 
     -   **Introduction to Data Visualization (Part 2)** - Thursday, February 22 at 12:00-13:00 ET
 
-## 🌐Overview of R (5 min)
+## 🌐Overview of R (5 min, 12:10)
 
 -   R is a programming language and environment designed for statistical computing and data analysis
 
@@ -35,7 +35,7 @@ editor: visual
 
     -   Can be slower and might not handle memory as efficiently as other languages
 
-## 💻Getting started with R on Posit Cloud (5 min)
+## 💻Getting started with R on Posit Cloud (5 min, 12:15)
 
 -   *Why are we using Posit Cloud?*
 
@@ -47,6 +47,7 @@ editor: visual
 
     -   Script editor: writing and editing R code
 
+        -   🚶‍♀️Create a new R script
         -   🚶‍♀️Write a basic mathematical operation
 
     -   Console: executing R code and displaying output
@@ -59,15 +60,15 @@ editor: visual
 
     -   Files/Plots/Packages: managing files, displaying plots, handling packages
 
-## 📝Quarto document (1 min)
+## 📝Quarto document (1 min, 12:16)
 
--   Quarto allows you to combine your code, its results, and your prose into one document.
+-   Quarto is a file format/publishing system that allows you to combine your code, its results, and your prose into one document.
 
 -   It supports multiple output formats (e.g., PDFs, HTML files, Word files, presentations)
 
 -   When you click the **Render** button a document will be generated that includes both the content and output of any embedded R code chunks.
 
-## 1️⃣Data types and variables (10 min)
+## 1️⃣Data types and variables (10 min, 12:26)
 
 -   **Data types** define the format in which data is stored and the operations that can be performed on that data
 
@@ -83,7 +84,7 @@ editor: visual
 
     5.  Logical: Boolean values (TRUE or FALSE)
 
--   🚶‍♀️Assign a string to a variable:
+-   🚶‍♀️Assign a string (data of type character) to a variable:
 
     ```{r data-type-01}
     char_var <- "Hello world"
@@ -92,6 +93,8 @@ editor: visual
     -   Variables are containers for storing data
 
     -   It's best to use lowercase letters and underscores for variable names
+
+    -   R is case-sensitive so `A` and `a` are different variables
 
     -   We want to use descriptive names that describes the information held by the variable
 
@@ -137,7 +140,7 @@ editor: visual
 class(bool_var)
 ```
 
-## 🏢Data structures (5 min)
+## 🏢Data structures (5 min, 12:31)
 
 -   **Data structures** are containers for organizing and storing data in different formats
 
@@ -176,6 +179,8 @@ class(bool_var)
         num_vector[1]
         ```
 
+        -   Note: R starts counting from 1, not 0!
+
     -   🚶‍♀️Retrieve the second and fourth values of the vector:
 
         ```{r data-structures-04}
@@ -189,7 +194,7 @@ class(bool_var)
     -   🚶‍♀️Create a factor variable:
 
         ```{r data-structures-05}
-        social_class <- c("Upper", "Middle", "Lower", "Upper", "Middle")
+        social_class <- factor(c("Upper", "Middle", "Lower", "Upper", "Middle"))
         ```
 
     -   Helps users arrange bar graph in desired order when using ggplot2
@@ -219,7 +224,7 @@ class(bool_var)
         df[2, 2]
         ```
 
-## ➕Operators (10 min)
+## ➕Operators (10 min, 12:41)
 
 -   **Arithmetic operators**
 
@@ -312,13 +317,13 @@ class(bool_var)
         (4 > 6) | (9 == 9)
         ```
 
-    -   🚶‍♀️Check that NOT TRUE is FALSE:
+    -   🚶‍♀️Check that **NOT** TRUE is FALSE:
 
         ```{r operators-14}
         !TRUE
         ```
 
-## 🔣Functions (10 min)
+## 🔣Functions (10 min, 12:51)
 
 -   **Functions** are blocks of code designed to perform specific tasks
 
@@ -361,7 +366,7 @@ class(bool_var)
         max_value <- max(numbers)
         ```
 
--   🏃‍♀️ Practice exercises - Part 3
+-   🏃‍♀️ Practice exercises - Part 2
 
     1.  Use the `sd()` function to return the standard deviation of `numbers`
 
@@ -384,7 +389,7 @@ class(bool_var)
 
     -   The documentation provides useful information, including usage, parameters, examples, and explanations
 
-## 👩‍🔧Pipes (5 min)
+## 👩‍🔧Pipes (5 min, 12:56)
 
 -   🚶‍♀️ Compute the sum of every number from 1 to 10 and take its square root, rounded to 3 decimal places:
 
@@ -403,7 +408,7 @@ class(bool_var)
       round(digits = 3)
     ```
 
--   The **pipe operator** allows users to chain operations together, enhancing code readability and reducing nesting
+-   The **pipe operator** (Ctrl/Cmd + Shift + M) allows users to chain operations together, enhancing code readability and reducing nesting
 
 -   Operations flow left-to-right; sequence of actions is presented more clearly
 
@@ -411,7 +416,7 @@ class(bool_var)
 
     -   They help to clarify the purpose or functionality of code for other users and even for yourself in the future
 
-## 📦Packages (5 min)
+## 📦Packages (3 min, 12:59)
 
 -   **Packages** are sets of R functions, data sets, and other resources bundled together
 

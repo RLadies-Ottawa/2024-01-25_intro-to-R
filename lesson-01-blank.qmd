@@ -47,6 +47,7 @@ editor: visual
 
     -   Script editor: writing and editing R code
 
+        -   🚶‍♀️Create a new R script
         -   🚶‍♀️Write a basic mathematical operation
 
     -   Console: executing R code and displaying output
@@ -61,7 +62,7 @@ editor: visual
 
 ## 📝Quarto document (1 min)
 
--   Quarto allows you to combine your code, its results, and your prose into one document.
+-   Quarto is a file format/publishing system that allows you to combine your code, its results, and your prose into one document.
 
 -   It supports multiple output formats (e.g., PDFs, HTML files, Word files, presentations)
 
@@ -83,7 +84,7 @@ editor: visual
 
     5.  Logical: Boolean values (TRUE or FALSE)
 
--   🚶‍♀️Assign a string to a variable:
+-   🚶‍♀️Assign a string (data of type character) to a variable:
 
     ```{r data-type-01}
 
@@ -92,6 +93,8 @@ editor: visual
     -   Variables are containers for storing data
 
     -   It's best to use lowercase letters and underscores for variable names
+
+    -   R is case-sensitive so `A` and `a` are different variables
 
     -   We want to use descriptive names that describes the information held by the variable
 
@@ -172,6 +175,8 @@ editor: visual
         ```{r data-structures-03}
 
         ```
+
+        -   Note: R starts counting from 1, not 0!
 
     -   🚶‍♀️Retrieve the second and fourth values of the vector:
 
@@ -301,7 +306,7 @@ editor: visual
 
         ```
 
-    -   🚶‍♀️Check that NOT TRUE is FALSE:
+    -   🚶‍♀️Check that **NOT** TRUE is FALSE:
 
         ```{r operators-14}
 
@@ -349,7 +354,7 @@ editor: visual
 
         ```
 
--   🏃‍♀️ Practice exercises - Part 3
+-   🏃‍♀️ Practice exercises - Part 2
 
     1.  Use the `sd()` function to return the standard deviation of `numbers`
 
@@ -385,7 +390,7 @@ editor: visual
 
     ```
 
--   The **pipe operator** allows users to chain operations together, enhancing code readability and reducing nesting
+-   The **pipe operator** (Ctrl/Cmd + Shift + M) allows users to chain operations together, enhancing code readability and reducing nesting
 
 -   Operations flow left-to-right; sequence of actions is presented more clearly
 
@@ -393,7 +398,7 @@ editor: visual
 
     -   They help to clarify the purpose or functionality of code for other users and even for yourself in the future
 
-## 📦Packages (5 min)
+## 📦Packages (3 min)
 
 -   **Packages** are sets of R functions, data sets, and other resources bundled together
 
